@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bún Ngon Online | Đậm Đà Hương Vị Trên Từng Món Ăn</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="promo-ribbon">🔥 Giảm ngay 20% cho đơn hàng đầu tiên! 🔥</div>
+
+<div class="navbar">
+    <a href="#" class="logo">🍜 BÚN NGON 24H</a>
+
+    <!-- 🔥 MENU MỚI THÊM -->
+    <div class="menu">
+        <a href="index.html">Trang chủ</a>
+        <a href="about.html">Giới thiệu</a>
+        <a href="support.html">Hỗ trợ</a>
+    </div>
+
+    <div id="user-info"></div>
+</div>
+
+<div class="hero-banner">
+    <h1>THƯỞNG THỨC MÓN NGON TẠI NHÀ</h1>
+    <p>Giao hàng siêu tốc trong 20 phút</p>
+</div>
+
+<div class="container">
+    
+    <aside class="category-sidebar">
+        <h3><i class="fas fa-list"></i> Danh mục</h3>
+        <ul id="category-list"></ul>
+    </aside>
+
+    <main>
+        <div class="auth-card login-box">
+            <h3 style="margin-top:0"><i class="fas fa-user-circle"></i> Tài khoản</h3>
+            <input id="email" placeholder="Email của bạn">
+            <input id="password" type="password" placeholder="Mật khẩu">
+            <div style="display: flex; gap: 10px;">
+                <button onclick="login()" class="btn-add" style="background:#2ecc71">Đăng nhập</button>
+                <button onclick="register()" class="btn-add" style="background:var(--secondary-color)">Đăng ký</button>
+            </div>
+        </div>
+
+        <div class="section-title">🍜 Món ăn đặc sắc</div>
+        <div class="grid" id="foods"></div>
+
+        <div class="section-title">🥤 Đồ uống giải nhiệt</div>
+        <div class="grid" id="drinks"></div>
+    </main>
+
+    <aside class="cart-sidebar">
+        <h3><i class="fas fa-shopping-cart"></i> Giỏ hàng</h3>
+        <div id="cart-content"></div>
+        <hr>
+        <div style="display:flex; justify-content:space-between; font-weight:bold; font-size:1.2rem;">
+            <span>Tổng cộng:</span>
+            <span id="total-price">0</span><span> VND</span>
+        </div>
+
+        <input id="address" placeholder="Nhập địa chỉ giao hàng" 
+       style="width:100%; margin-top:10px; padding:10px; box-sizing: border-box;">
+
+<select id="payment" 
+        style="width:100%; margin-top:10px; padding:10px; box-sizing: border-box;">
+    <option value="COD">Thanh toán khi nhận hàng (COD)</option>
+    <option value="Bank">Chuyển khoản</option>
+    <option value="Momo">Ví Momo</option>
+</select>
+
+        <button onclick="confirmOrder()" class="btn-add" style="font-size:1.1rem; padding:15px; margin-top:20px;">
+            THANH TOÁN NGAY
+        </button>
+    </aside>
+
+</div>
+
+<div id="product-modal" class="modal">
+    <div class="modal-content">
+        <h3 id="modal-product-name">Tên sản phẩm</h3>
+
+        <p>Chọn kích cỡ:</p>
+        <div class="size-option">
+            <input type="radio" name="size" id="s-size" value="S" hidden>
+            <label for="s-size">Size S<br><small>-5.000đ</small></label>
+
+            <input type="radio" name="size" id="m-size" value="M" checked hidden>
+            <label for="m-size">Size M<br><small>Gốc</small></label>
+
+            <input type="radio" name="size" id="l-size" value="L" hidden>
+            <label for="l-size">Size L<br><small>+10.000đ</small></label>
+        </div>
+
+        <p>Ghi chú món ăn:</p>
+        <textarea id="modal-note" placeholder="Ví dụ: Không hành, nhiều bún..."></textarea>
+
+        <div style="display:flex; gap:10px; margin-top:20px;">
+            <button onclick="closeModal()" class="btn-add" style="background:#95a5a6">Hủy</button>
+            <button onclick="addToCartFinal()" class="btn-add">Thêm vào giỏ</button>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div>
+            <h4>Liên hệ</h4>
+            <p>📍 TP.HCM</p>
+            <p>📞 0123 456 789</p>
+        </div>
+
+        <div>
+            <h4>Điều hướng</h4>
+            <a href="index.html">Trang chủ</a><br>
+            <a href="about.html">Giới thiệu</a><br>
+            <a href="#">Hỗ trợ</a>
+        </div>
+    </div>
+</footer>
+
+<script type="module" src="script.js"></script>
+
+<script src="https://kit.fontawesome.com/xxx.js"></script>
+
+<script src="config.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+

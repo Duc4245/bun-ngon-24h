@@ -1,0 +1,21 @@
+{
+  "foods": [
+    { "id": 1, "name": "Bún Bò", "price": 45000, "category": "Bún" },
+    { "id": 2, "name": "Bún Chả", "price": 40000, "category": "Bún" },
+    { "id": 3, "name": "Cơm tấm", "price": 35000, "category": "Cơm" }
+  ],
+  "drinks": [
+    { "id": 1, "name": "Tra Da", "price": 5000, "image": "" },
+    { "id": 2, "name": "Coca Cola", "price": 15000, "image": "" }
+  ],
+  "orders": [
+    {
+    "user": "test@gmail.com",
+    "items": [],
+    "total": 0,
+    "address": "TP.HCM",
+    "payment": "COD",
+    "date": ""
+  }
+  ]
+}
