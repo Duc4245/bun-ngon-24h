@@ -3,13 +3,17 @@ import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, on
 from "https://www.gstatic.com/firebasejs/12.12.0/firebase-auth.js";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyAdxKhklpQBddCWGSYQM4mNmGP-OugZ0",
+    apiKey: "AIzaSyAdxKhklpQBddCWGSyQYM4mNmGP-OugOZ0",
     authDomain: "online-food-ordering-e8a1d.firebaseapp.com",
     projectId: "online-food-ordering-e8a1d",
+    storageBucket: "online-food-ordering-e8a1d.firebasestorage.app",
+    messagingSenderId: "632336127062",
+    appId: "1:632336127062:web:04c1aa377dbe6066e817f7"
 };
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
+window.auth = auth;
 
 // giao diện UI cho đăng nhập :))
 onAuthStateChanged(auth, (user) => {
